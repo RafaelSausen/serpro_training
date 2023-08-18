@@ -24,3 +24,6 @@ hs_err_pid*
 replay_pid*
 java/serpro/target/*
 python/src/__pycache__/*
+javascript/node_modules/*
+javascript/coverage/*
+javascript/package-lock.json
