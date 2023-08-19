@@ -28,3 +28,4 @@ javascript/node_modules/*
 javascript/coverage/*
 javascript/package-lock.json
 .vscode/settings.json
+javascript/yarn.lock
