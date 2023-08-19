@@ -9,13 +9,13 @@ export default class StudentRepository {
   async create(nome) {
     const sql = `INSERT INTO students (nome) VALUES ('${nome}') RETURNING id, nome;`;
     const student = await this._database.execute(sql);
-    return new Student(student.rows[0].id);
+    return new Student(student.rows[0].id, student.rows[0].nome);
   }
 
   async update(id, nome) {
     const sql = `UPDATE students SET nome = '${nome}' WHERE id = ${id} RETURNING id, nome;`;
     const student = await this._database.execute(sql);
-    return new Student(student.rows[0].id);
+    return new Student(student.rows[0].id, student.rows[0].nome);
   }
 
   async delete(id) {
@@ -27,8 +27,13 @@ export default class StudentRepository {
     const sql = `SELECT * FROM students;`;
     const rawStudents = await this._database.execute(sql);
     const students = [];
-    for (const student in rawStudents) {
-      students.push(new Student(student.id));
+    for (const student in rawStudents.rows) {
+      students.push(
+        new Student(
+          rawStudents.rows[student].id,
+          rawStudents.rows[student].nome
+        )
+      );
     }
     return students;
   }

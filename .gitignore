@@ -27,3 +27,4 @@ python/src/__pycache__/*
 javascript/node_modules/*
 javascript/coverage/*
 javascript/package-lock.json
+.vscode/settings.json
