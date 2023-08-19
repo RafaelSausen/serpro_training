@@ -1,4 +1,4 @@
-package com.trainning.serpro;
+package com.training.serpro;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

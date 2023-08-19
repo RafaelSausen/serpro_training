@@ -1,4 +1,4 @@
-package com.trainning.serpro;
+package com.training.serpro;
 
 public class Student {
     private int id;

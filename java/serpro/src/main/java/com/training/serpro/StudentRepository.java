@@ -1,4 +1,4 @@
-package com.trainning.serpro;
+package com.training.serpro;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
